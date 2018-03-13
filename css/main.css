@@ -1510,9 +1510,9 @@ html {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
   .container {
-    max-width: 1140px;
+    max-width: 1230px;
   }
 }
 .container-fluid {
@@ -2411,7 +2411,7 @@ html {
     margin-left: 91.666667%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -2741,7 +2741,7 @@ html {
     display: inline-flex !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
   .d-xl-none {
     display: none !important;
   }
@@ -3345,7 +3345,7 @@ html {
     align-self: stretch !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
   .flex-xl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -3483,9 +3483,187 @@ html {
 /*# sourceMappingURL=bootstrap-grid.css.map */
 body {
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
-  background: #f4f4f4;
-  color: #ffefd3;
+  font-family: 'Poppins', sans-serif;
+  color: #262626;
+  line-height: 27px;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  background: #F5F7FA;
+}
+/*
+ *********************************
+ * Global
+ *********************************
+*/
+.section-number {
+  font-weight: 300;
+  line-height: normal;
+  font-size: 26px;
+  margin-bottom: 39px;
+}
+.section-number:before {
+  content: '/ ';
+  color: #2577F4;
+}
+.section-title {
+  font-weight: 600;
+  line-height: 51px;
+  font-size: 31px;
+  margin-bottom: 5px;
+}
+.wrapper {
+  padding-top: 80px;
+  position: relative;
+}
+/*
+ *********************************
+ * Header
+ *********************************
+*/
+.header {
+  background: #E9ECF2;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+/*
+ *********************************
+ * 
+ *********************************
+*/
+.section-hero {
+  background: #2577F4;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+/*
+ *********************************
+ * 01
+ *********************************
+*/
+/*
+ *********************************
+ * 02
+ *********************************
+*/
+.tile__item_hide {
+  visibility: hidden;
+  display: none;
+}
+@media (min-width: 768px) {
+  .tile__item {
+    height: 230px;
+  }
+  .tile__item_high,
+  .tile__item_adaptive-height {
+    height: 460px;
+  }
+}
+@media (min-width: 990px) {
+  .tile__item_hide {
+    display: block;
+  }
+  .tile__item_high {
+    margin-bottom: -230px;
+  }
+  .tile__item_adaptive-height {
+    height: 230px;
+  }
+}
+@media (min-width: 1200px) {
+  .tile__item {
+    height: 300px;
+  }
+  .tile__item_high {
+    height: 600px;
+    margin-bottom: -300px;
+  }
+  .tile__item_adaptive-height {
+    height: 300px;
+  }
+}
+.tile__title {
+  font-weight: 600;
+  line-height: 33px;
+  font-size: 20px;
+}
+.tile .tile-1 {
+  background: #2F80ED;
+  padding: 50px 110px 20px 60px;
+  color: white;
+}
+.tile .tile-2 {
+  background: #E9ECF2;
+  text-align: center;
+}
+.tile .tile-3 {
+  border: 1px solid #DDE2ED;
+  text-align: center;
+  padding: 83px 10px 30px;
+}
+.tile .tile-4 {
+  background: #E9ECF2;
+  border: 1px solid #DDE2ED;
+  text-align: center;
+}
+.tile .tile-5 {
+  background: #F5F7FA;
+  border: 1px solid #E9ECF2;
+  padding: 50px 110px 20px 60px;
+}
+.tile .tile-6 {
+  background: #00439E;
+  text-align: center;
+  color: white;
+  padding: 47px 39px;
+}
+.tile .tile-7 {
+  background: #2577F4;
+  text-align: center;
+  color: white;
+  padding: 50px 10px;
+}
+/*
+ *********************************
+ * 03
+ *********************************
+*/
+.technologies-slider__item {
+  height: 200px;
+}
+.technologies-slider__title {
+  font-weight: 600;
+  line-height: 33px;
+  font-size: 20px;
+  color: #2577F4;
+}
+/*
+ *********************************
+ * 04
+ *********************************
+*/
+.team-list {
+  text-align: center;
+}
+.team-list__img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d3d3d3;
+}
+.team-list__name {
+  font-weight: 600;
+  line-height: 33px;
+  font-size: 20px;
+}
+.team-list__note {
+  font-size: 13px;
+  opacity: .5;
 }
 
 /*# sourceMappingURL=main.css.map */
