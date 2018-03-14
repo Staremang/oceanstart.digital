@@ -12,6 +12,8 @@
 @height-lg: 	900px;
 
 
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
 body {
 	
     -webkit-font-smoothing: antialiased;
@@ -85,7 +87,54 @@ body {
     height: 100vh;
     color: white;
 	overflow: hidden;
-    
+	position: relative;
+	> .container {
+		position: relative;
+		height: 100%;
+	}
+	&__circle {
+		position: absolute;
+		transform: translateZ(0);
+		background: linear-gradient(207.5deg, #428CFC 13.38%, rgba(66, 140, 252, 0) 87.78%);
+		border-radius: 50%;
+		width: 546px;
+		height: 546px;
+		left: -234px;
+		bottom: 11px;
+	}
+	&__header {
+		display: flex;
+		transform: translateZ(0);
+	}
+	&__nav {
+		display: flex;
+		margin-left: auto;
+		justify-content: space-between;
+		width: 700px;
+	}
+	&__nav-link {
+		
+	}
+	
+	&__title {
+		max-width: 777px;
+		font-weight: 600;
+		line-height: normal;
+		font-size: 36px;
+		letter-spacing: -0.01em;
+		transform: translateZ(0);
+	}
+}
+.hero-advantages {
+	&__value {
+		
+		font-weight: 300;
+		line-height: normal;
+		font-size: 50px;
+		letter-spacing: -0.02em;
+		margin-bottom: 3px;
+
+	}
 }
 
 
