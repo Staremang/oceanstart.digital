@@ -12,10 +12,10 @@
 </head>
 <body>
 	<section class="section-hero">
+		<figure class="section-hero__circle"></figure>
+		<figure class="section-hero__circle"></figure>
+
 		<div class="container">
-			<figure class="section-hero__circle"></figure>
-			<figure class="section-hero__circle"></figure>
-			
 			<div class="section-hero__header">
 				<svg width="31" height="37" viewBox="0 0 31 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 					<g fill="#ffffff">
@@ -33,7 +33,9 @@
 					<a href="#" class="section-hero__nav-link">Works</a>
 				</nav>
 			</div>
+			<a href="#" class="section-hero__link">Google Partner</a>
 			<h1 class="section-hero__title">Your digital partner with top-notch expertise in web development, design, marketing and project management</h1>
+			<a href="#" class="section-hero__btn btn btn_white">Get a quote</a>
 			<div class="row no-gutters hero-advantages">
 				<div class="col-md-3">
 					<div class="hero-advantages__value">5</div>
@@ -53,7 +55,7 @@
 	</section>
 	<div class="wrapper">
 		<header class="header">
-			<div class="container">
+			<div class="container header__container">
 				<svg width="31" height="37" viewBox="0 0 31 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 					<g fill="#262626">
 						<path d="M 31 11.57L 17.3622 25.409L 17.3622 13.839L 31 0L 31 11.57Z"/>
@@ -63,10 +65,20 @@
 						<path d="M 2.46795 34.471L 11.4156 34.471L 13.8732 36.9859L 0 36.9859L 0 22.9046L 2.46795 25.409L 2.46795 34.471Z"/>
 					</g>
 				</svg>
+				<nav class="header__nav">
+					<a href="#" class="header__link">Who are we</a>
+					<a href="#" class="header__link">Technologies</a>
+					<a href="#" class="header__link">Team</a>
+					<a href="#" class="header__link">Works</a>
+				</nav>
 			</div>
 		</header>
-		<section class="">
+		<section class="section-map">
 			<div class="container">
+				<div class="section-map__partners">
+					<div class="section-map__number">7</div>
+					<div class="section-map__text">Partners</div>
+				</div>
 				<div class="section-number">01</div>
 				<div class="row no-gutters">
 					<div class="col-md-6">
@@ -76,12 +88,15 @@
 				</div>
 				<div class="row no-gutters">
 					<div class="col-lg-9">
-						<div class="row no-gutters">
-							<div class="col-md-4">Got projects you aren’t passionate about or can’t allocate time and resources to complete them?</div>
-							<div class="col-md-4">Contractors miss deadlines or just disappear?</div>
-							<div class="col-md-4">Can’t keep up with your growth to build a solid team?</div>
+						<div class="row no-gutters section-map__container">
+							<div class="col-md-4"><div class="section-map__block">Got projects you aren’t passionate about or can’t allocate time and resources to complete them?</div></div>
+							<div class="col-md-4"><div class="section-map__block">Contractors miss deadlines or just disappear?</div></div>
+							<div class="col-md-4"><div class="section-map__block">Can’t keep up with your growth to build a solid team?</div></div>
 						</div>
 					</div>
+				</div>
+				<div class="map">
+					<img src="img/map.svg" class="map__img" alt="">
 				</div>
 			</div>
 		</section>
@@ -241,6 +256,123 @@
 				</div>
 			</div>
 		</section>
+		<section class="section-works">
+			<div class="container">
+				<div class="section-number">05</div>
+				<div class="row no-gutters">
+					<div class="col-md-6">
+						<h1 class="section-title">Works</h1>
+						<p class="section-subtitle">Projects that we are proud of</p>
+					</div>
+				</div>
+				<div class="section-works__slider">
+					<div class="works-item">
+						.works-item__
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-form">
+			<div class="container">
+				<div class="section-number">06</div>
+				<div class="row no-gutters">
+					<div class="col-md-6">
+						<h1 class="section-title">Get a quote</h1>
+						<p class="section-subtitle">We kindly invite you to establish our partnership. Call us or send a message, we’ll answer soon</p>
+					</div>
+				</div>
+				<div class="row no-gutters">
+					<div class="col-md-6">
+						<h2 class="section-form__title">Services you are interested in</h2>
+						<div class="row no-gutters">
+							<div class="col-md-6">
+								<h3 class="section-form__subtitle">Design</h3>
+								
+								<div class="section-form__checkbox-group">
+									<label class="step__label">
+										<input type="checkbox" class="checkbox" name="" value="Web">
+										Web
+									</label>
+								</div>
+								<div class="section-form__checkbox-group">
+									<label class="step__label">
+										<input type="checkbox" class="checkbox" name="" value="Web">
+										Web
+									</label>
+								</div>
+								<div class="section-form__checkbox-group">
+									<label class="step__label">
+										<input type="checkbox" class="checkbox" name="" value="Web">
+										Web
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h2 class="section-form__title">Message</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<a href="mailto:partners@ocenstart.ru" class="footer__email">partners@ocenstart.ru</a>
+				<div class="row no-gutters footer__">
+					<div class="col-md-3">
+						<div class="head-col">
+							<div class="head-col__left">
+								<div class="head-col__photo" style="background-image: url(/)"></div>
+							</div>
+							<div class="head-col__right">
+								<h3 class="head-col__title">Andrey Nikonov</h3>
+								<p class="head-col__text">+7 (920) 251-99-28</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="footer__description">Development office</div>
+						<div class="footer__col">
+							<div class="footer__col-left">
+								
+							</div>
+							<div class="footer__col-right">
+								<h3 class="footer__title">Nizhnij Novgorod</h3>
+								<p class="footer__text">Rozhdestvenskaja Str., 26</p>
+								<p class="footer__text">+7 (831) 2-889-354</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="footer__description">Development office</div>
+						<div class="footer__col">
+							<div class="footer__col-left">
+								
+							</div>
+							<div class="footer__col-right">
+								<h3 class="footer__title">Nizhnij Novgorod</h3>
+								<p class="footer__text">Rozhdestvenskaja Str., 26</p>
+								<p class="footer__text">+7 (831) 2-889-354</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="footer__description">Development office</div>
+						<div class="footer__col">
+							<div class="footer__col-left">
+								
+							</div>
+							<div class="footer__col-right">
+								<h3 class="footer__title">Nizhnij Novgorod</h3>
+								<p class="footer__text">Rozhdestvenskaja Str., 26</p>
+								<p class="footer__text">+7 (831) 2-889-354</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copyright">Oceanstart © 2018 — All Rights Reserved</div>
+			</div>
+		</footer>
 	</div>
 	<script>
 		var addr = "Окулова 75, корпус 8",
