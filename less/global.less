@@ -28,7 +28,7 @@ body {
 	
 	
 	
-//	background: url(../img/rm/1400.png) top center no-repeat;
+	background: url(../img/rm/1400.png) top center no-repeat;
 	background-size: 1400px auto;
 }
 
@@ -77,7 +77,7 @@ body {
 	
 	padding: 15px 20px 18px;
 	display: inline-block;
-	min-width: 180px;
+//	min-width: 180px;
 	text-align: center;
 	border: 0;
 	cursor: pointer;
@@ -107,8 +107,30 @@ body {
 			box-shadow: none;
 		}
 	}
-	&_border {
+	&_white-border {
 		
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		> svg {
+			fill: #ffffff;
+		}
+		&:hover {
+			background: white;
+			border-color: white;
+			> svg {
+				fill: #2473EF;
+			}
+		}
+	}
+	&_black-border {
+		
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		box-shadow: 0px 10px 30px rgba(37, 119, 244, 0.3);
+		background: transparent;
+		color: #FFFFFF;
+		&:hover {
+			background: rgba(0, 0, 0, 0.2);
+			border-color: transparent;
+		}
 	}
 }
 input[type="checkbox"] {
@@ -258,18 +280,45 @@ a.link {
 		height: 100%;
 		transform: translateZ(0);
 	}
-	&__circle {
+	&:before {
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 100%;
+		background: #216ee8;
+		left: 50%;
+		transform: translateZ(0);
+//		z-index: -1;
+		box-shadow: 299px 0 0 0 #216ee8,
+					599px 0 0 0 #216ee8, 
+					-300px 0 0 0 #216ee8,
+					-600px 0 0 0 #216ee8; 
+	}
+	&__circle-1 {
 		position: absolute;
 		transform: translateZ(0);
-		background: linear-gradient(207.5deg, #428CFC 13.38%, rgba(66, 140, 252, 0) 87.78%);
+		background: linear-gradient(207deg, #428CFC 13.38%, rgba(66, 140, 252, 0) 87.78%);
 		border-radius: 50%;
 		width: 546px;
 		height: 546px;
-		left: -234px;
+		left: -219px;
 		bottom: 11px;
 		margin: 0;
+		z-index: -1;
 		
+	}
+	&__circle-2 {
+		position: absolute;
+		transform: translateZ(0);
+		background: linear-gradient(207deg, #428CFC 13.38%, rgba(66, 140, 252, 0) 87.78%);
+		border-radius: 50%;
+		right: -95px;
+		top: 14px;
+		margin: 0;
+		z-index: -1;
 		
+		width: 234px;
+		height: 234px;
 	}
 	&__header {
 		display: flex;
@@ -312,20 +361,49 @@ a.link {
 		
 		margin-top: 26px;
 	}
+	&__list {
+		position: absolute;
+		width: 300px;
+		right: 15px;
+		list-style: none;
+		padding-left: 21px;
+		margin: 0;
+		top: 238px;
+	}
+	&__list-item {
+		margin-bottom: 120px;
+		position: relative;
+		&:before {
+			content: '';
+			width: 3px;
+			height: 3px;
+			background: white;
+			border-radius: 50%;
+			position: absolute;
+			left: -23px;
+			top: 12px;
+		}
+	}
 	&__btn {
 		margin-top: 12px;
+		width: 180px;
 	}
 }
 .hero-advantages {
-	margin-top: 84px;
+	margin-top: 81px;
 	&__value {
 		
 		font-weight: 300;
 		line-height: normal;
 		font-size: 50px;
 		letter-spacing: -0.02em;
-		margin-bottom: 3px;
+//		margin-bottom: 3px;
 
+	}
+	&__btn-down {
+		float: right;
+		margin-top: 25px;
+		width: 80px;
 	}
 }
 
@@ -346,8 +424,20 @@ a.link {
 		height: 160px;
 		background: #F5F7FA;
 	}
-	&__block {
-		padding: 24px 29px;
+	&__block-1, &__block-2, &__block-3 {
+		padding-top: 24px;
+	}
+	&__block-1 {
+		padding-right: 45px;
+		padding-left: 29px;
+	}
+	&__block-2 {
+		padding-right: 54px;
+		padding-left: 22px;
+	}
+	&__block-3 {
+		padding-right: 44px;
+		padding-left: 24px;
 	}
 	
 	&__partners {
@@ -461,6 +551,23 @@ a.link {
 .section-tile {
 	
     padding-top: 133px;
+	> .container {
+		position: relative;
+	}
+	&__text {
+		
+		line-height: 25px;
+		font-size: 14px;
+		text-align: right;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+
+		color: #C2C7D1;
+		transform: rotate(90deg);
+		position: absolute;
+		right: 277px;
+		top: -18px;
+	}
 }
 .tile {
     margin-top: 72px;
@@ -513,7 +620,7 @@ a.link {
 	
 	
 	.tile-1 {
-		background: #2F80ED;
+		background: #2F80ED url(../img/tile-1-bg.png) no-repeat center;
 		padding: 50px 110px 20px 60px;
 		color: white;
 		&__val {
@@ -597,6 +704,8 @@ a.link {
 		&__bottom {
 			flex: 0 0 50%;
 			padding: 95px 10px 30px;
+			background: url(../img/tile-3-bg.svg) bottom no-repeat;
+			background-size: 100% 100%;
 		}
 		&__val {
 			
@@ -641,6 +750,7 @@ a.link {
 		&__btn {
 			
 			margin-top: 72px;
+			width: 180px;
 		}
 	}
 	.tile-5 {
@@ -653,10 +763,12 @@ a.link {
 //		}
 	}
 	.tile-6 {
-		background: #00439E;
+		background: #00439E url(../img/open-book.svg) 12px 95px no-repeat;
 		text-align: center;
 		color: white;
 		padding: 45px 39px;
+		
+		
 		
 		&__val {
 			
@@ -680,6 +792,23 @@ a.link {
 		text-align: center;
 		color: white;
 		padding: 50px 10px;
+		.tile__text {
+			max-width: 300px;
+			margin-left: auto;
+			margin-right: auto;
+			
+			text-align: left; // ????????????????????????????????????????????????????
+		}
+		.btn {
+			
+			width: 226px;
+			margin-top: 43px;
+		}
+		&__icon {
+			
+			margin-left: -31px;
+			margin-right: 16px;
+		}
 	}
 }
 
@@ -807,6 +936,44 @@ a.link {
 			
 			left: -15px;
 			top: -15px;
+		}
+		&-1 {
+			&:before {
+				left: -6px;
+				top: -15px;
+			}
+		}
+		&-2 {
+			&:before {
+				left: 12px;
+				top: 5px;
+			}
+		}
+		&-3 {
+			&:before {
+				left: 9px;
+				top: 8px;
+			}
+		}
+		&-4 {
+			&:before {
+				
+				left: -17px;
+				top: 4px;
+			}
+		}
+		&-5 {
+			&:before {
+
+				left: 12px;
+				top: -4px;
+			}
+		}
+		&-6 {
+			&:before {
+				left: -8px;
+				top: -7px;
+			}
 		}
 	}
 	&__name {
@@ -1085,6 +1252,60 @@ a.link {
 	&__left {
 		flex: 0 0 133px;
 		max-width: 133px;
+	}
+}
+.input-container {
+	position: relative;
+    margin-bottom: 13px;
+	&__label {
+		
+		line-height: 23px;
+		font-size: 13px;
+		letter-spacing: 0.02em;
+
+		color: #262626;
+		opacity: 0.5;
+		
+		
+		position: absolute;
+		left: 30px;
+		bottom: 21px;
+		&_textarea {
+			top: 5px;
+			bottom: auto;
+//			height: 132px;
+		}
+	}
+	&__input {
+		font-family: 'Poppins', sans-serif;
+		display: block;
+		width: 100%;
+		background: none;
+		outline: none;
+		border: 0;
+		border-bottom: 1px solid #DDE2ED;
+		padding-left: 110px;
+		padding-bottom: 20px;
+		padding-top: 12px;
+		padding-right: 20px;
+
+		line-height: 23px;
+		font-size: 13px;
+		letter-spacing: 0.02em;
+		&.success {
+			color: #2577F4;
+			border-color: #2577F4;
+		}
+		&.error {
+			color: #EB5757;
+			border-color: #EB5757;
+		}
+		&_textarea {
+			height: 120px;
+			padding-left: 30px;
+			padding-top: 26px;
+			max-width: 100%;
+		}
 	}
 }
 
