@@ -4383,15 +4383,15 @@ a.link_large:after {
 .section-works {
   padding-top: 142px;
 }
+.section-works__scroll {
+  overflow-x: scroll;
+}
 .section-works__slider {
   padding-top: 62px;
   padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 10000px;
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
 }
 .section-works__bottom {
   text-align: center;
