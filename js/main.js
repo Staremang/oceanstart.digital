@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	
+	
+	
 	var headerTop = $('.header').offset().top;
 	
 	$(document).scroll(function () {
@@ -70,7 +73,25 @@ $(document).ready(function () {
 //	})
 	dragMaster.makeDraggable(document.querySelector('.works-scrollbar__track'))
 	
+	
+	
+	
+	
+	
+//	$('.technologies-slider').slick({
+//		dots: true
+//	});
 })
+
+
+
+
+
+
+
+
+
+
 function fixEvent(e) {
 	// получить объект событие для IE
 	e = e || window.event
@@ -121,7 +142,7 @@ var dragMaster = (function() {
 		e = fixEvent(e);
 		
 		var offset = e.clientX - mouseOffset.x;
-		console.log(maxOffsetTrack);
+//		console.log(maxOffsetTrack);
 		
 		if (offset >= 0 && offset <= maxOffsetTrack) {
 			dragObject.style.left = (e.clientX - mouseOffset.x) + 'px';
