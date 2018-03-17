@@ -169,7 +169,7 @@
 					</div>
 					<div class="tile-4 col-md-4 col-lg-3 tile__item tile__item_high">
 						<div class="tile__title">Clients that trust us</div>
-						<div class="tile__text">There’s more than 200 clients that work with us on a regular basis</div>
+						<div class="tile-4__text">There’s more than 200 clients that work with us on a regular basis</div>
 						<div class="tile-4__val">200+</div>
 						<div class="tile-4__note">clients</div>
 						<button class="tile-4__btn btn btn_blue">Become one</button>
@@ -198,7 +198,7 @@
 							Want to see more?
 						</div>
 						<div class="tile__text">Besides our works in the portfolio you can request a full list of projects by us</div>
-						<button data-fancybox data-src="#request-portfolio"  class="btn btn_black-border">Request Portfolio</button>
+						<button data-fancybox data-src="#request-portfolio"  class="btn btn_black-border">Request <span>Portfolio</span></button>
 					</div>
 				</div>
 			</div>
@@ -464,12 +464,8 @@
 			</div>
 			</div>
 			<div class="container">
-				
-				<div class="works-scrollbar">
-					<div class="works-scrollbar__track"></div>
-				</div>
 				<div class="section-works__bottom">
-					<button class="btn btn_blue">More</button>
+					<button class="section-works__btn btn btn_blue">More</button>
 				</div>
 			</div>
 		</section>
@@ -482,258 +478,291 @@
 						<p class="section-subtitle">We kindly invite you to establish our partnership. Call us or send a message, we’ll answer soon</p>
 					</div>
 				</div>
-				<form class="row no-gutters section-form__form">
-					<div class="col-md-6">
-						<h2 class="section-form__title">Services you are interested in</h2>
-						<div class="row no-gutters">
-							<div class="col-md-6 checkbox-container">
-								<h3 class="checkbox-container__title">Design</h3>
-								<div class="checkbox-container__list">
-									<div class="checkbox-container__left">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
+				<div class="section-form__form-container">
+					<div class="form-bg">
+						<svg class="form-bg__icon" width="130" height="130" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs>
+								<path id="path1_stroke" d="M 1.76777 15.7322C 0.791456 14.7559 -0.791456 14.7559 -1.76777 15.7322C -2.74408 16.7085 -2.74408 18.2915 -1.76777 19.2678L 1.76777 15.7322ZM 17.5 35L 15.7322 36.7678C 16.7085 37.7441 18.2915 37.7441 19.2678 36.7678L 17.5 35ZM 54.2678 1.76777C 55.2441 0.791456 55.2441 -0.791456 54.2678 -1.76777C 53.2915 -2.74408 51.7085 -2.74408 50.7322 -1.76777L 54.2678 1.76777ZM -1.76777 19.2678L 15.7322 36.7678L 19.2678 33.2322L 1.76777 15.7322L -1.76777 19.2678ZM 19.2678 36.7678L 54.2678 1.76777L 50.7322 -1.76777L 15.7322 33.2322L 19.2678 36.7678Z"/>
+							</defs>
+							<g id="Group">
+								<path fill="#27AE60" d="M 130 65C 130 100.899 100.899 130 65 130C 29.1015 130 0 100.899 0 65C 0 29.1015 29.1015 0 65 0C 100.899 0 130 29.1015 130 65Z"/>
+								<g id="Vector">
+									<use xlink:href="#path1_stroke" transform="translate(40 54)" fill="#0F8A43"/>
+								</g>
+								<g id="Vector">
+									<use xlink:href="#path1_stroke" transform="translate(39 48)" fill="#FFFFFF"/>
+								</g>
+							</g>
+						</svg>
+
+						<h2 class="form-bg__title">Thank you, Alexandr!</h2>
+						<div class="form-bg__text">You message has been successfully sent. We will contact you soon</div>
+					</div>
+					<form class="row no-gutters section-form__form">
+						<div class="col-md-6">
+							<h2 class="section-form__title">Services you are interested in</h2>
+							<div class="row no-gutters section-form__checkbox-block">
+								<div class="col-md-6 checkbox-container">
+									<h3 class="checkbox-container__title">Design</h3>
+									<div class="checkbox-container__list">
+										<div class="checkbox-container__left">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
-										</div>
-									</div>
-									<div class="checkbox-container__right">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 checkbox-container">
-								<h3 class="checkbox-container__title">Front-End</h3>
-								<div class="checkbox-container__list">
-									<div class="checkbox-container__left">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
-										</div>
-									</div>
-									<div class="checkbox-container__right">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
+										<div class="checkbox-container__right">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-6 checkbox-container">
-								<h3 class="checkbox-container__title">CMS</h3>
-								<div class="checkbox-container__list">
-									<div class="checkbox-container__left">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
+								<div class="col-md-6 checkbox-container">
+									<h3 class="checkbox-container__title">Front-End</h3>
+									<div class="checkbox-container__list">
+										<div class="checkbox-container__left">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
-										</div>
-									</div>
-									<div class="checkbox-container__right">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 checkbox-container">
-								<h3 class="checkbox-container__title">Back-End</h3>
-								<div class="checkbox-container__list">
-									<div class="checkbox-container__left">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
-										</div>
-									</div>
-									<div class="checkbox-container__right">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
+										<div class="checkbox-container__right">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-6 checkbox-container">
-								<h3 class="checkbox-container__title">Mobile Development</h3>
-								<div class="checkbox-container__list">
-									<div class="checkbox-container__left">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
+								<div class="col-md-6 checkbox-container">
+									<h3 class="checkbox-container__title">CMS</h3>
+									<div class="checkbox-container__list">
+										<div class="checkbox-container__left">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
-										</div>
-									</div>
-									<div class="checkbox-container__right">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
+										<div class="checkbox-container__right">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-6 checkbox-container">
-								<h3 class="checkbox-container__title">Marketing</h3>
-								<div class="checkbox-container__list">
-									<div class="checkbox-container__left">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
+								<div class="col-md-6 checkbox-container">
+									<h3 class="checkbox-container__title">Back-End</h3>
+									<div class="checkbox-container__list">
+										<div class="checkbox-container__left">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
-										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
+										<div class="checkbox-container__right">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
 									</div>
-									<div class="checkbox-container__right">
-										<div class="section-form__checkbox-group">
-											<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
-											<label for="quote-1" class="checkbox-label">Web</label>
+								</div>
+								<div class="col-md-6 checkbox-container">
+									<h3 class="checkbox-container__title">Mobile Development</h3>
+									<div class="checkbox-container__list">
+										<div class="checkbox-container__left">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
-											<label for="quote-2" class="checkbox-label">UX/UI</label>
+										<div class="checkbox-container__right">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
-										<div class="section-form__checkbox-group">
-											<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
-											<label for="quote-3" class="checkbox-label">Mobile</label>
+									</div>
+								</div>
+								<div class="col-md-6 checkbox-container">
+									<h3 class="checkbox-container__title">Marketing</h3>
+									<div class="checkbox-container__list">
+										<div class="checkbox-container__left">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
+										</div>
+										<div class="checkbox-container__right">
+											<div class="section-form__checkbox-group">
+												<input  id="quote-1" type="checkbox" class="checkbox" name="" value="Web">
+												<label for="quote-1" class="checkbox-label">Web</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-2" type="checkbox" class="checkbox" name="" value="UX/UI">
+												<label for="quote-2" class="checkbox-label">UX/UI</label>
+											</div>
+											<div class="section-form__checkbox-group">
+												<input  id="quote-3" type="checkbox" class="checkbox" name="" value="Mobile">
+												<label for="quote-3" class="checkbox-label">Mobile</label>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-6">
-						<h2 class="section-form__title">Message</h2>
-						<div class="row no-gutters">
-							<div class="col-md-6">
-								<div class="input-container">
-									<label for="" class="input-container__label">First Name</label>
-									<input type="text" class="input-container__input">
+						<div class="col-md-6 input-container">
+							<h2 class="section-form__title">Message</h2>
+							<div class="row no-gutters">
+								<div class="col-md-6">
+									<div class="input-container__group">
+										<label for="" class="input-container__label">First Name</label>
+										<input type="text" class="input-container__input">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-container__group">
+										<label for="" class="input-container__label">Last Name</label>
+										<input type="text" class="input-container__input">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-container__group">
+										<label for="" class="input-container__label">Company</label>
+										<input type="text" class="input-container__input success" value="Google" style="padding-left: 105px">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-container__group">
+										<label for="" class="input-container__label">Phone</label>
+										<input type="text" class="input-container__input error" value="Enter a phone number!" style="padding-left: 86px">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-container__group">
+										<label for="" class="input-container__label">Email</label>
+										<input type="text" class="input-container__input" style="padding-left: 75px">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-container__group">
+										<label for="" class="input-container__label">Country</label>
+										<input type="text" class="input-container__input">
+									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="input-container">
-									<label for="" class="input-container__label">Last Name</label>
-									<input type="text" class="input-container__input">
-								</div>
+							
+							<div class="input-container__group">
+								<label for="" class="input-container__label input-container__label_textarea">Message</label>
+								<textarea class="input-container__input input-container__input_textarea" name="" id="" rows="10"></textarea>
 							</div>
-							<div class="col-md-6">
-								<div class="input-container">
-									<label for="" class="input-container__label">Company</label>
-									<input type="text" class="input-container__input success" value="Google" style="padding-left: 105px">
+							<div class="input-container__bottom">
+								<div class="file-upload input-container__btn-1">
+									<input type="file" class="file-upload__input">
+									<button type="button" class="file-upload__btn btn btn_blue-border">Attach NDA</button>
+									<div class="file-upload__note"></div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="input-container">
-									<label for="" class="input-container__label">Phone</label>
-									<input type="text" class="input-container__input error" value="Enter a phone number!" style="padding-left: 86px">
+								<div class="file-upload input-container__btn-2">
+									<input type="file" class="file-upload__input">
+									<button type="button" class="file-upload__btn btn btn_blue-border">Attach RFP, RFO, RFT</button>
+									<div class="file-upload__note"></div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="input-container">
-									<label for="" class="input-container__label">Email</label>
-									<input type="text" class="input-container__input" style="padding-left: 75px">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="input-container">
-									<label for="" class="input-container__label">Country</label>
-									<input type="text" class="input-container__input">
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="input-container">
-									<label for="" class="input-container__label input-container__label_textarea">Message</label>
-									<textarea class="input-container__input input-container__input_textarea" name="" id="" rows="10"></textarea>
-								</div>
+								<button type="submit" class="btn btn_blue input-container__btn-submit">Send</button>
 							</div>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</section>
 		<footer class="footer">
@@ -808,6 +837,11 @@
 	
 	<script src="js/lib/slick.min.js"></script>
 	<script src="js/lib/jquery.fancybox.min.js"></script>
+<!--
+	<script src="js/lib/jquery.mousewheel.min.js"></script>
+	<script src="js/lib/jquery.mCustomScrollbar.min.js"></script>
+-->
+	<script src="js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
 	
 <!--
 	<script src="js/inputmask/inputmask.min.js"></script>

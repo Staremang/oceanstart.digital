@@ -23,176 +23,126 @@ $(document).ready(function () {
 		maxOffset: t()
 	}
 	
-    document.addEventListener("wheel", function (e) {
-		var delta = e.deltaY,
-			documentScroll = window.pageYOffset,
-			scroll = document.querySelector('.section-works__scroll').scrollLeft;
-		
-		
-		
-		var box = document.querySelector('.section-works__scroll').getBoundingClientRect();
-		
-//		console.log(box.top + box.height/2);
-		
-		if (delta >= 0) { // Вниз
-			if ((box.top + box.height/2) < screen.height/2 ) {
-
-				document.querySelector('.section-works__scroll').scrollLeft += delta;
-				if (scroll > 0 && scroll < worksSlider.maxOffset) {
-					document.body.style.overflow = 'hidden';
-				} else {
-					document.body.style.overflow = '';
-				}
-			} else {
-				document.body.style.overflow = '';
-			}
-		} else { // Вверх
-			if ((box.top + box.height/2) >= screen.height/2 ) {
-
-				document.querySelector('.section-works__scroll').scrollLeft += delta;
-				if (scroll > 0 && scroll < worksSlider.maxOffset) {
-					document.body.style.overflow = 'hidden';
-				} else {
-					document.body.style.overflow = '';
-				}
-			} else {
-				document.body.style.overflow = '';
-			}
-		}
-	});
-	
-	$('.section-works__scroll').scroll(function () {
-		var maxOffset = $('.works-scrollbar').width() - $('.works-scrollbar__track').width(),
-			ratio = document.querySelector('.section-works__scroll').scrollLeft / worksSlider.maxOffset;
-		
-		$('.works-scrollbar__track').css('left', maxOffset*ratio + 'px');
-		
-	})
-//	$('.works-scrollbar__track').click(function (e) {
-//		console.log(e)
-//	})
-	dragMaster.makeDraggable(document.querySelector('.works-scrollbar__track'))
-	
-	
-	
-	
-	
-	
-//	$('.technologies-slider').slick({
-//		dots: true
+//    document.addEventListener("wheel", function (e) {
+//		var delta = e.deltaY,
+//			documentScroll = window.pageYOffset,
+//			scroll = document.querySelector('.section-works__scroll').scrollLeft;
+//		
+//		
+//		
+//		var box = document.querySelector('.section-works__scroll').getBoundingClientRect();
+//		
+////		console.log(box.top + box.height/2);
+//		
+//		if (delta >= 0) { // Вниз
+//			if ((box.top + box.height/2) < screen.height/2 ) {
+//
+//				document.querySelector('.section-works__scroll').scrollLeft += delta;
+//				if (scroll > 0 && scroll < worksSlider.maxOffset) {
+//					document.body.style.overflow = 'hidden';
+//				} else {
+//					document.body.style.overflow = '';
+//				}
+//			} else {
+//				document.body.style.overflow = '';
+//			}
+//		} else { // Вверх
+//			if ((box.top + box.height/2) >= screen.height/2 ) {
+//
+//				document.querySelector('.section-works__scroll').scrollLeft += delta;
+//				if (scroll > 0 && scroll < worksSlider.maxOffset) {
+//					document.body.style.overflow = 'hidden';
+//				} else {
+//					document.body.style.overflow = '';
+//				}
+//			} else {
+//				document.body.style.overflow = '';
+//			}
+//		}
 //	});
+	
+//	$('.section-works__scroll').scroll(function () {
+//		var maxOffset = $('.works-scrollbar').width() - $('.works-scrollbar__track').width(),
+//			ratio = document.querySelector('.section-works__scroll').scrollLeft / worksSlider.maxOffset;
+//		
+//		$('.works-scrollbar__track').css('left', maxOffset*ratio + 'px');
+//		
+//	})
+////	$('.works-scrollbar__track').click(function (e) {
+////		console.log(e)
+////	})
+//	dragMaster.makeDraggable(document.querySelector('.works-scrollbar__track'))
+//	
+//	
+	$( ".file-upload" ).each(function (i, e) {
+		var wrapper = $(e),
+			inp = wrapper.find( ".file-upload__input" ),
+			btn = wrapper.find( ".file-upload__btn" ),
+			lbl = wrapper.find( ".file-upload__note" );
+
+	//    // Crutches for the :focus style:
+	//    btn.focus(function(){
+	//        wrapper.addClass( "focus" );
+	//    }).blur(function(){
+	//        wrapper.removeClass( "focus" );
+	//    });
+
+		// Yep, it works!
+		btn.add( lbl ).click(function(){
+			inp.click();
+		});
+
+		var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+
+		inp.change(function(){
+
+			var file_name;
+			if( file_api && inp[ 0 ].files[ 0 ] )
+				file_name = inp[ 0 ].files[ 0 ].name;
+			else
+				file_name = inp.val().replace( "C:\\fakepath\\", '' );
+			
+			var fileSize = inp[ 0 ].files[ 0 ].size;
+			
+			if (fileSize > 10*1024*1024) {
+				lbl.text('The file is too big!');
+				lbl.removeClass('success');
+				lbl.addClass('error');
+				inp.val('');
+				return;	
+			}
+			
+			if( ! file_name.length ) {
+				return;
+			}
+
+			if( lbl.is( ":visible" ) ){
+				lbl.text( file_name );
+				lbl.removeClass('error');
+				lbl.addClass('success');
+			} else {
+				btn.text( file_name );
+			}
+		});
+	})
+	
+	$('.section-works__scroll').mCustomScrollbar({
+		axis:"x" // horizontal scrollbar
+	});
+	if (screen.width < 990) {
+		$('.technologies-slider').slick({
+			dots: true
+		});
+		$('.section-form__checkbox-block').slick({
+			dots: true
+		});
+	}
 })
 
 
 
 
 
-
-
-
-
-
-function fixEvent(e) {
-	// получить объект событие для IE
-	e = e || window.event
-
-	// добавить pageX/pageY для IE
-	if ( e.pageX == null && e.clientX != null ) {
-		var html = document.documentElement
-		var body = document.body
-		e.pageX = e.clientX + (html && html.scrollLeft || body && body.scrollLeft || 0) - (html.clientLeft || 0)
-		e.pageY = e.clientY + (html && html.scrollTop || body && body.scrollTop || 0) - (html.clientTop || 0)
-	}
-
-	// добавить which для IE
-	if (!e.which && e.button) {
-		e.which = e.button & 1 ? 1 : ( e.button & 2 ? 3 : ( e.button & 4 ? 2 : 0 ) )
-	}
-
-	return e
-}
-
-
-
-
-var dragMaster = (function() {
-
-	var dragObject;
-	var mouseOffset;
-	var maxOffsetTrack = document.querySelector('.works-scrollbar').getBoundingClientRect().width - document.querySelector('.works-scrollbar__track').getBoundingClientRect().width;
-
-	// получить сдвиг target относительно курсора мыши
-	function getMouseOffset(target, e) {
-		return {
-			x:e.clientX - target.offsetLeft
-		};
-	}
-
-	function mouseUp(){
-		dragObject = null;
-
-		// очистить обработчики, т.к перенос закончен
-		document.onmousemove = null;
-		document.onmouseup = null;
-		document.ondragstart = null;
-		document.body.onselectstart = null;
-	}
-
-	function mouseMove(e){
-		e = fixEvent(e);
-		
-		var offset = e.clientX - mouseOffset.x;
-//		console.log(maxOffsetTrack);
-		
-		if (offset >= 0 && offset <= maxOffsetTrack) {
-			dragObject.style.left = (e.clientX - mouseOffset.x) + 'px';
-		}
-		return false;
-	}
-
-	function mouseDown(e) {
-		e = fixEvent(e)
-		if (e.which!=1) return;
-
-		dragObject  = this;
-
-		// получить сдвиг элемента относительно курсора мыши
-		mouseOffset = getMouseOffset(this, e);
-
-		// эти обработчики отслеживают процесс и окончание переноса
-		document.onmousemove = mouseMove;
-		document.onmouseup = mouseUp;
-
-		// отменить перенос и выделение текста при клике на тексте
-		document.ondragstart = function() { return false; }
-		document.body.onselectstart = function() { return false; }
-
-		return false;
-	}
-
-	return {
-		makeDraggable: function(element) {
-			element.onmousedown = mouseDown
-		}
-	}
-
-}())
-
-//function getPosition(e){
-//	var left = 0;
-//	var top  = 0;
-//
-//	while (e.offsetParent){
-//		left += e.offsetLeft;
-//		top  += e.offsetTop;
-//		e	 = e.offsetParent;
-//	}
-//
-//	left += e.offsetLeft;
-//	top  += e.offsetTop;
-//
-//	return {x:left, y:top}
-//}
 
 
 function t () {
