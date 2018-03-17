@@ -340,6 +340,8 @@ a.link {
 //	top: 0;
 //	left: 0;
 	
+	display: none;
+	
 	max-width: 600px;
 	max-height: 520px;
 	background: white;
@@ -1988,10 +1990,15 @@ a.link {
 		position: absolute;
 		left: 30px;
 		bottom: 21px;
+		transition: all .2s ease-in-out;
 		&_textarea {
 			top: 5px;
 			bottom: auto;
 //			height: 132px;
+		}
+		&.active {
+			bottom: 40px;
+			font-size: 10px;
 		}
 	}
 	&__input {
@@ -2002,7 +2009,7 @@ a.link {
 		outline: none;
 		border: 0;
 		border-bottom: 1px solid #DDE2ED;
-		padding-left: 110px;
+		padding-left: 30px;
 		padding-bottom: 20px;
 		padding-top: 12px;
 		padding-right: 20px;
@@ -2020,9 +2027,12 @@ a.link {
 		}
 		&_textarea {
 			height: 120px;
-			padding-left: 30px;
+			padding-left: 30px!important;
 			padding-top: 26px;
 			max-width: 100%;
+		}
+		@media (min-width: @width-lg) {
+			padding-left: 110px;
 		}
 	}
 	&__file {

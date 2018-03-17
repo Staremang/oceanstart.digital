@@ -256,12 +256,53 @@ $(document).ready(function () {
 		axis:"x" // horizontal scrollbar
 	});
 	if (screen.width < 990) {
+		$('.input-container__input').css('padding-left', '');
+		$('.input-container__input').focus(function () {
+				$(this).siblings('.input-container__label').addClass('active');
+			
+				if ($(this).hasClass('error')) {
+					$(this).removeClass('error');
+					$(this).val('');
+				}
+			})
+			.blur(function () {
+				if ($(this).attr('required')) {
+					if ($(this).val() == '') {
+	//					$(this).siblings('.input-container__label').removeClass('active');
+						$(this).addClass('error');
+						$(this).val($(this).data('msg'));
+					} else {
+						$(this).addClass('success');
+					}
+				}
+			})
 		$('.technologies-slider').slick({
 			dots: true
 		});
 		$('.section-form__checkbox-block').slick({
 			dots: true
 		});
+	} else {
+		
+		$('.input-container__input').focus(function () {
+//				$(this).siblings('.input-container__label').addClass('active');
+			
+				if ($(this).hasClass('error')) {
+					$(this).removeClass('error');
+					$(this).val('');
+				}
+			})
+			.blur(function () {
+				if ($(this).attr('required')) {
+					if ($(this).val() == '') {
+	//					$(this).siblings('.input-container__label').removeClass('active');
+						$(this).addClass('error');
+						$(this).val($(this).data('msg'));
+					} else {
+						$(this).addClass('success');
+					}
+				}
+			})
 	}
 })
 
