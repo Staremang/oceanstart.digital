@@ -11,6 +11,18 @@
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
+	<nav class="menu">
+		<a href="#who-are-we" data-anchor class="menu__link">Who are we</a>
+		<a href="#technologies" data-anchor class="menu__link">Technologies</a>
+		<a href="#team" data-anchor class="menu__link">Team</a>
+		<a href="#works" data-anchor class="menu__link">Works</a>
+		
+		
+		<button class="menu__btn-close">
+			<span></span>
+			<span></span>
+		</button>
+	</nav>
 	<section class="section-hero">
 
 		<div class="container">
@@ -26,11 +38,19 @@
 						<path d="M 2.46795 34.471L 11.4156 34.471L 13.8732 36.9859L 0 36.9859L 0 22.9046L 2.46795 25.409L 2.46795 34.471Z"/>
 					</g>
 				</svg>
+				<div class="section-hero__menu-btn menu-btn">
+					<svg viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<path d="M 0 1C 0 0.447723 0.447693 0 1 0L 25 0C 25.5523 0 26 0.447723 26 1C 26 1.55228 25.5523 2 25 2L 1 2C 0.447693 2 0 1.55228 0 1Z"/>
+						<path d="M 0 8C 0 7.44772 0.447693 7 1 7L 25 7C 25.5523 7 26 7.44772 26 8C 26 8.55228 25.5523 9 25 9L 1 9C 0.447693 9 0 8.55228 0 8Z"/>
+						<path d="M 1 14C 0.447693 14 0 14.4477 0 15C 0 15.5523 0.447693 16 1 16L 25 16C 25.5523 16 26 15.5523 26 15C 26 14.4477 25.5523 14 25 14L 1 14Z"/>
+					</svg>
+				</div>
+
 				<nav class="section-hero__nav">
-					<a href="#" class="section-hero__nav-link">Who are we</a>
-					<a href="#" class="section-hero__nav-link">Technologies</a>
-					<a href="#" class="section-hero__nav-link">Team</a>
-					<a href="#" class="section-hero__nav-link">Works</a>
+					<a href="#who-are-we" data-anchor class="section-hero__nav-link">Who are we</a>
+					<a href="#technologies" data-anchor class="section-hero__nav-link">Technologies</a>
+					<a href="#team" data-anchor class="section-hero__nav-link">Team</a>
+					<a href="#works" data-anchor class="section-hero__nav-link">Works</a>
 				</nav>
 			</div>
 			<a href="#" class="section-hero__link">Google Partner</a>
@@ -55,7 +75,7 @@
 					<div class="hero-advantages__text">starting at</div>
 				</div>
 				<div class="col-md-3">
-					<a data-anchor href="#" class="hero-advantages__btn-down btn btn_white-border">
+					<a data-anchor href="#first" class="hero-advantages__btn-down btn btn_white-border">
 						<svg width="13" height="9" viewBox="0 0 13 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<path transform="translate(-2 0)" d="M 6.97612 8.2072L 2.801 3.2953C 1.69688 1.99633 2.62006 0 4.32488 0L 12.6751 0C 14.3799 0 15.3031 1.99632 14.199 3.2953L 10.0239 8.2072C 9.22521 9.14681 7.77479 9.14681 6.97612 8.2072Z"/>
 						</svg>
@@ -77,11 +97,18 @@
 					</g>
 				</svg>
 				<nav class="header__nav">
-					<a href="#" class="header__link">Who are we</a>
-					<a href="#" class="header__link">Technologies</a>
-					<a href="#" class="header__link">Team</a>
-					<a href="#" class="header__link">Works</a>
+					<a href="#who-are-we" data-anchor class="header__link">Who are we</a>
+					<a href="#technologies" data-anchor class="header__link">Technologies</a>
+					<a href="#team" data-anchor class="header__link">Team</a>
+					<a href="#works" data-anchor class="header__link">Works</a>
 				</nav>
+				<div class="header__menu-btn menu-btn">
+					<svg viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<path d="M 0 1C 0 0.447723 0.447693 0 1 0L 25 0C 25.5523 0 26 0.447723 26 1C 26 1.55228 25.5523 2 25 2L 1 2C 0.447693 2 0 1.55228 0 1Z"/>
+						<path d="M 0 8C 0 7.44772 0.447693 7 1 7L 25 7C 25.5523 7 26 7.44772 26 8C 26 8.55228 25.5523 9 25 9L 1 9C 0.447693 9 0 8.55228 0 8Z"/>
+						<path d="M 1 14C 0.447693 14 0 14.4477 0 15C 0 15.5523 0.447693 16 1 16L 25 16C 25.5523 16 26 15.5523 26 15C 26 14.4477 25.5523 14 25 14L 1 14Z"/>
+					</svg>
+				</div>
 			</div>
 		</header>
 		<section class="section-map">
@@ -93,7 +120,7 @@
 				<div class="section-number">01</div>
 				<div class="row no-gutters">
 					<div class="col-md-6">
-						<h1 class="section-title">Outsource your projects to us!</h1>
+						<h1 class="section-title" id="first">Outsource your projects to us!</h1>
 						<p class="section-subtitle">We have win-win partnerships with several digital agencies in various parts of the world</p>
 					</div>
 				</div>
@@ -133,7 +160,7 @@
 				<div class="section-number">02</div>
 				<div class="row no-gutters">
 					<div class="col-md-6">
-						<h1 class="section-title">And who do we think we are?</h1>
+						<h1 class="section-title" id="who-are-we">And who do we think we are?</h1>
 						<p class="section-subtitle">Oceanstart is a full cycle agency which aimes to solve business problems of our clients </p>
 					</div>
 				</div>
@@ -209,7 +236,7 @@
 				<div class="section-number">03</div>
 				<div class="row no-gutters">
 					<div class="col-md-6">
-						<h1 class="section-title">Technologies & Tools</h1>
+						<h1 class="section-title" id="technologies">Technologies & Tools</h1>
 						<p class="section-subtitle">We use a wide variety of cutting edge techologies and tools in the process of creating our next product</p>
 					</div>
 				</div>
@@ -277,7 +304,7 @@
 				<div class="section-number">04</div>
 				<div class="row no-gutters">
 					<div class="col-md-6">
-						<h1 class="section-title">Team</h1>
+						<h1 class="section-title" id="team">Team</h1>
 						<p class="section-subtitle">We are proud not only of our talented staff but of the management team as well. All of them work in Oceanstart for more than 3 years, which allows to plan our long-term development</p>
 					</div>
 				</div>
@@ -330,7 +357,7 @@
 				<div class="section-number">05</div>
 				<div class="row no-gutters">
 					<div class="col-md-6">
-						<h1 class="section-title">Works</h1>
+						<h1 class="section-title" id="works">Works</h1>
 						<p class="section-subtitle">Projects that we are proud of</p>
 					</div>
 				</div>
@@ -369,6 +396,9 @@
 								<path d="M 1.19417 16.7697L 5.52367 16.7697L 6.71282 17.9932L 0 17.9932L 0 11.1428L 1.19417 12.3611L 1.19417 16.7697Z"/>
 							</g>
 						</svg>
+						<figure class="work-2__phone">
+							<div class="work-2__screen"></div>
+						</figure>
 					</div>
 					<div class="works-item__bottom">
 						<div class="works-item__name">M.House</div>
@@ -726,19 +756,19 @@
 								<div class="col-md-6">
 									<div class="input-container__group">
 										<label for="" class="input-container__label">Phone</label>
-										<input type="text" class="input-container__input error" value="Enter a phone number!" style="padding-left: 86px">
+										<input type="tel" class="input-container__input error" value="Enter a phone number!" style="padding-left: 81px">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-container__group">
 										<label for="" class="input-container__label">Email</label>
-										<input type="text" class="input-container__input" style="padding-left: 75px">
+										<input type="email" class="input-container__input" style="padding-left: 75px">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-container__group">
 										<label for="" class="input-container__label">Country</label>
-										<input type="text" class="input-container__input">
+										<input type="text" class="input-container__input"  style="padding-left: 92px;">
 									</div>
 								</div>
 							</div>
@@ -748,15 +778,17 @@
 								<textarea class="input-container__input input-container__input_textarea" name="" id="" rows="10"></textarea>
 							</div>
 							<div class="input-container__bottom">
-								<div class="file-upload input-container__btn-1">
-									<input type="file" class="file-upload__input">
-									<button type="button" class="file-upload__btn btn btn_blue-border">Attach NDA</button>
-									<div class="file-upload__note"></div>
-								</div>
-								<div class="file-upload input-container__btn-2">
-									<input type="file" class="file-upload__input">
-									<button type="button" class="file-upload__btn btn btn_blue-border">Attach RFP, RFO, RFT</button>
-									<div class="file-upload__note"></div>
+								<div class="input-container__file">
+									<div class="file-upload input-container__btn-1">
+										<input type="file" class="file-upload__input">
+										<button type="button" class="file-upload__btn">Attach NDA</button>
+										<div class="file-upload__note"></div>
+									</div>
+									<div class="file-upload input-container__btn-2">
+										<input type="file" class="file-upload__input">
+										<button type="button" class="file-upload__btn">Attach RFP, RFO, RFT</button>
+										<div class="file-upload__note"></div>
+									</div>
 								</div>
 								<button type="submit" class="btn btn_blue input-container__btn-submit">Send</button>
 							</div>
@@ -825,12 +857,48 @@
 		</footer>
 	</div>
 	
-	<div id="request-portfolio">
-		<h1>Request full portfolio</h1>
+	<div id="request-portfolio" class="popup">
+		<form class="input-container">
+			<h2 class="input-container__title">Request full portfolio</h2>
+			<div class="row no-gutters">
+				<div class="col-6">
+					<div class="input-container__group">
+						<label for="" class="input-container__label">Your Name</label>
+						<input type="text" name="name" class="input-container__input" required>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="input-container__group">
+						<label for="" class="input-container__label">Company</label>
+						<input type="text" name="company" class="input-container__input success" required value="Google" style="padding-left: 105px">
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="input-container__group">
+						<label for="" class="input-container__label">Email</label>
+						<input type="email" name="email" class="input-container__input" required style="padding-left: 75px">
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="input-container__group">
+						<label for="" class="input-container__label">Phone</label>
+						<input type="tel" name="tel" class="input-container__input error" required value="Enter a phone number!" style="padding-left: 81px">
+					</div>
+				</div>
+			</div>
+
+			<div class="input-container__group">
+				<label for="" class="input-container__label input-container__label_textarea">Message</label>
+				<textarea class="input-container__input input-container__input_textarea" name="" id="" rows="10"></textarea>
+			</div>
+			<div class="input-container__bottom">
+				<button type="submit" class="btn btn_blue input-container__btn-submit">Send</button>
+				<input type="hidden" name="form-type" value="request-portfolio">
+			</div>
+		</form>
 	</div>
 	<script>
-		var addr = "Окулова 75, корпус 8",
-			url = 'mail.php';
+		url = 'mail.php';
 	</script>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
