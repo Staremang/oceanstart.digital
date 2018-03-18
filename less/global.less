@@ -343,9 +343,12 @@ a.link {
 	display: none;
 	
 	max-width: 600px;
-	max-height: 520px;
 	background: white;
 	
+	height: 100%;
+	@media (min-width: @width-md) {
+		max-height: 520px;
+	}
 	
 }
 /*
