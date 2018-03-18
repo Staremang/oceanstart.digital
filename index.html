@@ -60,7 +60,7 @@
 				<li class="section-hero__list-item">Robust Solutions</li>
 				<li class="section-hero__list-item">Good Rates</li>
 			</ul>
-			<a href="#" class="section-hero__btn btn btn_white">Get a quote</a>
+			<a data-anchor href="#get-a-quote" class="section-hero__btn btn btn_white">Get a quote</a>
 			<div class="row no-gutters hero-advantages">
 				<div class="col-md-3">
 					<div class="hero-advantages__value">5</div>
@@ -504,7 +504,7 @@
 				<div class="section-number">06</div>
 				<div class="row no-gutters">
 					<div class="col-md-6">
-						<h1 class="section-title">Get a quote</h1>
+						<h1 class="section-title" id="get-a-quote">Get a quote</h1>
 						<p class="section-subtitle">We kindly invite you to establish our partnership. Call us or send a message, we’ll answer soon</p>
 					</div>
 				</div>
@@ -525,10 +525,10 @@
 							</g>
 						</svg>
 
-						<h2 class="form-bg__title">Thank you, Alexandr!</h2>
+						<h2 class="form-bg__title"></h2>
 						<div class="form-bg__text">You message has been successfully sent. We will contact you soon</div>
 					</div>
-					<form class="row no-gutters section-form__form">
+					<form class="row no-gutters section-form__form" id="form-get-a-quote">
 						<div class="col-md-6">
 							<h2 class="section-form__title">Services you are interested in</h2>
 							<div class="row no-gutters section-form__checkbox-block">
@@ -737,38 +737,38 @@
 							<div class="row no-gutters">
 								<div class="col-md-6">
 									<div class="input-container__group">
-										<label for="" class="input-container__label">First Name</label>
-										<input type="text" data-msg="Enter your first name!" name="first-name" class="input-container__input" required>
+										<label for="quote-first-name" class="input-container__label">First Name</label>
+										<input id="quote-first-name" type="text" data-msg="Enter your first name!" name="first-name" class="input-container__input" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-container__group">
-										<label for="" class="input-container__label">Last Name</label>
-										<input type="text" data-msg="Enter your last name!" name="last-name"  class="input-container__input" required>
+										<label for="quote-last-name" class="input-container__label">Last Name</label>
+										<input id="quote-last-name" type="text" data-msg="Enter your last name!" name="last-name"  class="input-container__input" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-container__group">
-										<label for="" class="input-container__label">Company</label>
-										<input type="text" data-msg="Enter the name of your company!" name="company" class="input-container__input" required style="padding-left: 105px">
+										<label for="quote-company" class="input-container__label">Company</label>
+										<input id="quote-company" type="text" data-msg="Enter the name of your company!" name="company" class="input-container__input" required style="padding-left: 105px">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-container__group">
-										<label for="" class="input-container__label">Phone</label>
-										<input type="tel" data-msg="Enter your phone number!" name="tel" class="input-container__input" required style="padding-left: 81px">
+										<label for="quote-tel" class="input-container__label">Phone</label>
+										<input id="quote-tel" type="tel" data-msg="Enter your phone number!" name="tel" class="input-container__input" required style="padding-left: 81px">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-container__group">
-										<label for="" class="input-container__label">Email</label>
-										<input type="email" data-msg="Enter your email!" name="email" class="input-container__input" required style="padding-left: 75px">
+										<label for="quote-email" class="input-container__label">Email</label>
+										<input id="quote-email" type="email" data-msg="Enter your email!" name="email" class="input-container__input" required style="padding-left: 75px">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input-container__group">
-										<label for="" class="input-container__label">Country</label>
-										<input type="text" data-msg="Enter your country!" name="country" class="input-container__input" required style="padding-left: 92px;">
+										<label for="quote-country" class="input-container__label">Country</label>
+										<input id="quote-country" type="text" data-msg="Enter your country!" name="country" class="input-container__input" required style="padding-left: 92px;">
 									</div>
 								</div>
 							</div>
@@ -780,17 +780,18 @@
 							<div class="input-container__bottom">
 								<div class="input-container__file">
 									<div class="file-upload input-container__btn-1">
-										<input type="file" class="file-upload__input">
+										<input type="file" name="file-1" class="file-upload__input">
 										<button type="button" class="file-upload__btn">Attach NDA</button>
 										<div class="file-upload__note"></div>
 									</div>
 									<div class="file-upload input-container__btn-2">
-										<input type="file" class="file-upload__input">
+										<input type="file" name="file-2" class="file-upload__input">
 										<button type="button" class="file-upload__btn">Attach RFP, RFO, RFT</button>
 										<div class="file-upload__note"></div>
 									</div>
 								</div>
 								<button type="submit" class="btn btn_blue input-container__btn-submit">Send</button>
+								<input type="hidden" name="form-type" value="get-a-quote">
 							</div>
 						</div>
 					</form>
@@ -858,31 +859,31 @@
 	</div>
 	
 	<div id="request-portfolio" class="popup">
-		<form class="input-container">
+		<form class="input-container" id="form-request-portfolio">
 			<h2 class="input-container__title">Request full portfolio</h2>
 			<div class="row no-gutters">
 				<div class="col-6">
 					<div class="input-container__group">
-						<label for="" class="input-container__label">Your Name</label>
-						<input type="text" data-msg="Enter your name!" name="name" class="input-container__input" required>
+						<label for="request-portfolio-name" class="input-container__label">Your Name</label>
+						<input  id="request-portfolio-name" type="text" data-msg="Enter your name!" name="name" class="input-container__input" required>
 					</div>
 				</div>
 				<div class="col-6">
 					<div class="input-container__group">
-						<label for="" class="input-container__label">Company</label>
-						<input type="text" data-msg="Enter the name of your company!" name="company" class="input-container__input" required style="padding-left: 105px">
+						<label for="request-portfolio-company" class="input-container__label">Company</label>
+						<input  id="request-portfolio-company" type="text" data-msg="Enter the name of your company!" name="company" class="input-container__input" required style="padding-left: 105px">
 					</div>
 				</div>
 				<div class="col-6">
 					<div class="input-container__group">
-						<label for="" class="input-container__label">Email</label>
-						<input type="email" data-msg="Enter your email!" name="email" class="input-container__input" required style="padding-left: 75px">
+						<label for="request-portfolio-email" class="input-container__label">Email</label>
+						<input  id="request-portfolio-email" type="email" data-msg="Enter your email!" name="email" class="input-container__input" required style="padding-left: 75px">
 					</div>
 				</div>
 				<div class="col-6">
 					<div class="input-container__group">
-						<label for="" class="input-container__label">Phone</label>
-						<input type="tel" data-msg="Enter your phone number!" name="tel" class="input-container__input" required style="padding-left: 81px">
+						<label for="request-portfolio-tel" class="input-container__label">Phone</label>
+						<input  id="request-portfolio-tel" type="tel" data-msg="Enter your phone number!" name="tel" class="input-container__input" required style="padding-left: 81px">
 					</div>
 				</div>
 			</div>
@@ -898,7 +899,8 @@
 		</form>
 	</div>
 	<script>
-		url = 'mail.php';
+		var url = 'mail.php',
+			MAX_FILE_SIZE = 10*1024*1024;
 	</script>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

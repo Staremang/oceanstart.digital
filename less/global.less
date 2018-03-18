@@ -1884,6 +1884,7 @@ a.link {
 	}
 	&__form {
 		margin-top: 41px;
+		transition: opacity .2s ease-in-out;
 		@media (min-width: @width-lg) {
 			margin-top: 93px;
 		}
@@ -1907,6 +1908,7 @@ a.link {
 	flex-direction: column;
 	justify-content: center;
 	opacity: 0;
+	transition: opacity .2s ease-in-out;
 	&__icon {
 		width: 130px;
 		height: 130px;
@@ -1997,8 +1999,16 @@ a.link {
 //			height: 132px;
 		}
 		&.active {
-			bottom: 40px;
+//			bottom: 40px;
 			font-size: 10px;
+			transform: translateY(-19px);
+		}
+		@media (min-width: @width-lg) {
+			&.active {
+	//			bottom: 40px;
+				font-size: 13px;
+				transform: none;
+			}
 		}
 	}
 	&__input {
@@ -2021,18 +2031,20 @@ a.link {
 			color: #2577F4;
 			border-color: #2577F4;
 		}
-		&.error {
+		&.error, {
 			color: #EB5757;
 			border-color: #EB5757;
 		}
 		&_textarea {
 			height: 120px;
-			padding-left: 30px!important;
-			padding-top: 26px;
 			max-width: 100%;
 		}
 		@media (min-width: @width-lg) {
 			padding-left: 110px;
+			&_textarea {
+				padding-left: 30px!important;
+				padding-top: 26px;
+			}
 		}
 	}
 	&__file {
@@ -2098,6 +2110,7 @@ a.link {
 		position: relative;
 		height: auto;
 		outline: none;
+		cursor: pointer;
 		&:before {
 			content: '';
 			position: absolute;

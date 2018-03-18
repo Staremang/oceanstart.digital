@@ -205,15 +205,7 @@ $(document).ready(function () {
 			inp = wrapper.find( ".file-upload__input" ),
 			btn = wrapper.find( ".file-upload__btn" ),
 			lbl = wrapper.find( ".file-upload__note" );
-
-	//    // Crutches for the :focus style:
-	//    btn.focus(function(){
-	//        wrapper.addClass( "focus" );
-	//    }).blur(function(){
-	//        wrapper.removeClass( "focus" );
-	//    });
-
-		// Yep, it works!
+		
 		btn.add( lbl ).click(function(){
 			inp.click();
 		});
@@ -230,7 +222,7 @@ $(document).ready(function () {
 			
 			var fileSize = inp[ 0 ].files[ 0 ].size;
 			
-			if (fileSize > 10*1024*1024) {
+			if (fileSize > MAX_FILE_SIZE) {
 				lbl.text('The file is too big!');
 				lbl.removeClass('success');
 				lbl.addClass('error');
@@ -255,27 +247,99 @@ $(document).ready(function () {
 	$('.section-works__scroll').mCustomScrollbar({
 		axis:"x" // horizontal scrollbar
 	});
+	$("[data-fancybox]").fancybox({
+		margin : [0, 0]
+	});
+	
+	
+	$('[type="submit"]').click(function (e) {
+		e.preventDefault();
+		
+		var form = $(this).parents('form'),
+			success = true;
+		
+		form.find('.input-container__input').each(function (i, input) {
+			if (!input.checkValidity()) {
+				$(input).siblings('.input-container__label').addClass('active');
+				
+				input.classList.add('error');
+				input.value = input.getAttribute('data-msg');
+				success = false;
+			}
+		})
+		if (!success)
+			return;
+		
+//		console.log(form[0]);
+		
+		var data = new FormData(form[0]),
+			xhr  = new XMLHttpRequest();
+		
+//		xhr.open("POST", url);
+//
+//		xhr.onreadystatechange = function() {
+//			if (xhr.readyState != 4) return;
+//			
+//			if(xhr.status != 200) {
+//				alert(xhr.status + ': ' + xhr.statusText);
+//			} else {
+//				if (form.attr('id') == 'form-get-a-quote') {
+//					var name = $('#quote-first-name').val();
+//
+//					$('.form-bg__title').text('Thank you, ' + name + '!');
+//
+//					form.css('opacity', '0');
+//					$('.form-bg').css('opacity', '1');
+//				} else if (form.attr('id') == 'form-request-portfolio') {
+//					$.fancybox.close();
+//				}
+//			}
+//		};
+//		
+//		xhr.send(data);
+		
+		if (form.attr('id') == 'form-get-a-quote') {
+			var name = $('#quote-first-name').val();
+
+			$('.form-bg__title').text('Thank you, ' + name + '!');
+
+			form.css('opacity', '0');
+			$('.form-bg').css('opacity', '1');
+		} else if (form.attr('id') == 'form-request-portfolio') {
+			$.fancybox.close();
+		}
+		
+	})
+		
+	$('.input-container__input').focus(function () {
+			$(this).siblings('.input-container__label').addClass('active');
+
+			if (this.classList.contains('error')) {
+				this.classList.remove('error');
+				this.value = '';
+			}
+
+		})
+		.blur(function () {
+
+			if (this.value != '') {
+				if (!this.checkValidity()) {
+//					$(this).siblings('.input-container__label').removeClass('active');
+					this.classList.add('error');
+					this.value = this.getAttribute('data-msg');
+				} else {
+					this.classList.add('success');
+				}
+			} else {
+				$(this).siblings('.input-container__label').removeClass('active');
+				this.classList.remove('success');
+			}
+		})
+	
+	
 	if (screen.width < 990) {
 		$('.input-container__input').css('padding-left', '');
-		$('.input-container__input').focus(function () {
-				$(this).siblings('.input-container__label').addClass('active');
-			
-				if ($(this).hasClass('error')) {
-					$(this).removeClass('error');
-					$(this).val('');
-				}
-			})
-			.blur(function () {
-				if ($(this).attr('required')) {
-					if ($(this).val() == '') {
-	//					$(this).siblings('.input-container__label').removeClass('active');
-						$(this).addClass('error');
-						$(this).val($(this).data('msg'));
-					} else {
-						$(this).addClass('success');
-					}
-				}
-			})
+		
 		$('.technologies-slider').slick({
 			dots: true
 		});
@@ -284,25 +348,6 @@ $(document).ready(function () {
 		});
 	} else {
 		
-		$('.input-container__input').focus(function () {
-//				$(this).siblings('.input-container__label').addClass('active');
-			
-				if ($(this).hasClass('error')) {
-					$(this).removeClass('error');
-					$(this).val('');
-				}
-			})
-			.blur(function () {
-				if ($(this).attr('required')) {
-					if ($(this).val() == '') {
-	//					$(this).siblings('.input-container__label').removeClass('active');
-						$(this).addClass('error');
-						$(this).val($(this).data('msg'));
-					} else {
-						$(this).addClass('success');
-					}
-				}
-			})
 	}
 })
 

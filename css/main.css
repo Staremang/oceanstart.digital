@@ -455,7 +455,7 @@ body.fancybox-iosfix {
   -webkit-overflow-scrolling: touch;
 }
 .fancybox-bg {
-  background: #1e1e1e;
+  background: #00439E;
   opacity: 0;
   -webkit-transition-duration: inherit;
   -o-transition-duration: inherit;
@@ -468,7 +468,7 @@ body.fancybox-iosfix {
   transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71);
 }
 .fancybox-is-open .fancybox-bg {
-  opacity: 0.87;
+  opacity: 0.5;
   -webkit-transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
   transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -5573,6 +5573,9 @@ a.link_large:after {
 }
 .section-form__form {
   margin-top: 41px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 @media (min-width: 990px) {
   .section-form__form {
@@ -5604,6 +5607,9 @@ a.link_large:after {
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 .form-bg__icon {
   width: 130px;
@@ -5701,8 +5707,18 @@ a.link_large:after {
   bottom: auto;
 }
 .input-container__label.active {
-  bottom: 40px;
   font-size: 10px;
+  -webkit-transform: translateY(-19px);
+  -ms-transform: translateY(-19px);
+  transform: translateY(-19px);
+}
+@media (min-width: 990px) {
+  .input-container__label.active {
+    font-size: 13px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
 }
 .input-container__input {
   font-family: 'Poppins', sans-serif;
@@ -5730,13 +5746,15 @@ a.link_large:after {
 }
 .input-container__input_textarea {
   height: 120px;
-  padding-left: 30px!important;
-  padding-top: 26px;
   max-width: 100%;
 }
 @media (min-width: 990px) {
   .input-container__input {
     padding-left: 110px;
+  }
+  .input-container__input_textarea {
+    padding-left: 30px!important;
+    padding-top: 26px;
   }
 }
 .input-container__file {
@@ -5817,6 +5835,7 @@ a.link_large:after {
   position: relative;
   height: auto;
   outline: none;
+  cursor: pointer;
 }
 .file-upload__btn:before {
   content: '';
