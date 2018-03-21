@@ -143,19 +143,60 @@ function getCoords(elem) {
 
 }
 
-
-
 $(document).ready(function () {
+
+	var worksSlider = {
+		element: document.querySelector('.section-works__scroll'),
+		top: getCoords(document.querySelector('.section-works__scroll')).top,
+		scrollLeft: 0,
+		maxOffset: t(),
+		end: false,
+		start: true
+	}
+
+	
+	
 	$('a[data-anchor]').anchor({
 		transitionDuration : 1000
 	});
-	$('.section-works__scroll').mCustomScrollbar({
-		axis:"x" // horizontal scrollbar
-	});
+	
 	$("[data-fancybox]").fancybox({
 		margin : [0, 0]
 	});
+//	new SimpleBar(worksSlider.element);
+//	new PerfectScrollbar('body', {
+//		handlers: ['click-rail', 'drag-thumb', 'touch']
+//	});
 	
+	new PerfectScrollbar('.section-works__scroll', {
+		suppressScrollY: true,
+		handlers: ['click-rail', 'drag-thumb', 'touch']
+	});
+	worksSlider.element.addEventListener('ps-x-reach-end', function () {
+		worksSlider.end = true;
+		console.log('ps-x-reach-end');
+    });
+	worksSlider.element.addEventListener('ps-x-reach-start', function () {
+		worksSlider.start = true;
+		console.log('ps-x-reach-start');
+    });
+//	$(worksSlider.element).mCustomScrollbar({
+//		axis:"x", // horizontal scrollbar
+//		mouseWheel:{ enable: false },
+//		callbacks: {
+//			onCreate: function(){
+//				document.getElementById('video-1').play();
+//				document.getElementById('video-2').play();
+//			},
+//			onScroll:function () {
+//				worksSlider.scrolling = false;
+//			},
+//			whileScrolling: function () {
+//				worksSlider.scrollLeft = this.mcs.leftPct;
+//			}
+//		}
+//	});
+//	
 	
 	
 	
@@ -183,78 +224,131 @@ $(document).ready(function () {
 	
 	
 	
-	/*********************
-	 * Header
-	 *********************/
-	var header 		= document.querySelector('.header'),
-		headerTop 	= getCoords(header);
+//	/*********************
+//	 * Header
+//	 *********************/
+//	var header 		= document.querySelector('.header'),
+//		headerTop 	= getCoords(header);
+//	
+//	document.addEventListener('scroll', function () {
+//		if (window.pageYOffset > headerTop.top) {
+//			header.classList.add('fixed');
+//		} else {
+//			header.classList.remove('fixed');
+//		}
+//	})
 	
-	document.addEventListener('scroll', function () {
-		if (window.pageYOffset > headerTop.top) {
-			header.classList.add('fixed');
-		} else {
-			header.classList.remove('fixed');
-		}
-	})
+	
+//	var scrollAnimation = 	window.requestAnimationFrame ||
+//             				window.webkitRequestAnimationFrame ||
+//             				window.mozRequestAnimationFrame ||
+//             				window.msRequestAnimationFrame ||
+//             				window.oRequestAnimationFrame ||
+//             				// IE Fallback, you can even fallback to onscroll
+//             				function(callback){ window.setTimeout(callback, 1000/60) },
+//		lastPosition 	= -1,
+//		stopSlider 		= false;
+//	
+//	
 	
 	
-	
-	var worksSlider = {
-		top: getCoords(document.querySelector('.section-works__scroll')).top,
-		maxOffset: t()
-	}
-	
-//    document.addEventListener("wheel", function (e) {
-//		var delta = e.deltaY,
-//			documentScroll = window.pageYOffset,
-//			scroll = document.querySelector('.section-works__scroll').scrollLeft;
+//	function loop () { 
+//		// Avoid calculations if not needed
 //		
 //		
 //		
-//		var box = document.querySelector('.section-works__scroll').getBoundingClientRect();
+//		var box = worksSlider.element.getBoundingClientRect();
 //		
-////		console.log(box.top + box.height/2);
 //		
-//		if (delta >= 0) { // Вниз
-//			if ((box.top + box.height/2) < screen.height/2 ) {
-//
-//				document.querySelector('.section-works__scroll').scrollLeft += delta;
-//				if (scroll > 0 && scroll < worksSlider.maxOffset) {
+////		console.log(lastPosition < window.pageYOffset);
+//		if (box.top < 100 && box.top > -100) {
+//			
+//			if (lastPosition == window.pageYOffset) {
+//				scrollAnimation(loop);
+//				return false;
+//			} else if (lastPosition < window.pageYOffset) {// вниз
+//				
+//				if (!worksSlider.end && !stopSlider) {
+//					stopSlider = true;
+//					
+//					console.log('stop');
+//					
+//					worksSlider.start = false;
 //					document.body.style.overflow = 'hidden';
-//				} else {
+//					
+//					document.addEventListener('wheel', scrollSlider);
+//				} else if (worksSlider.end && stopSlider) {
+//					
+//					console.log('start');
+//					stopSlider = false;
 //					document.body.style.overflow = '';
+//					
+//					document.removeEventListener('wheel', scrollSlider);
 //				}
 //			} else {
-//				document.body.style.overflow = '';
-//			}
-//		} else { // Вверх
-//			if ((box.top + box.height/2) >= screen.height/2 ) {
-//
-//				document.querySelector('.section-works__scroll').scrollLeft += delta;
-//				if (scroll > 0 && scroll < worksSlider.maxOffset) {
+//				console.log('вверх');
+//				if (!worksSlider.start && !stopSlider) {
+//					console.log('stop');
+//					stopSlider = true;
+//					
+//					
+//					
+//					worksSlider.end = false;
 //					document.body.style.overflow = 'hidden';
-//				} else {
+//					
+//					
+//					document.addEventListener('wheel', scrollSlider);
+//				} else if (worksSlider.start && stopSlider){
+//					console.log('start');
+//					stopSlider = false;
 //					document.body.style.overflow = '';
+//					document.removeEventListener('wheel', scrollSlider);
 //				}
-//			} else {
-//				document.body.style.overflow = '';
 //			}
 //		}
-//	});
+//		
+//		lastPosition = window.pageYOffset;
+//		scrollAnimation( loop );
+//	}
+//
+//	// Call the loop for the first time
+//	loop();
+//	
+//	function scrollSlider (e) {
+//		e.preventDefault();
+//		worksSlider.element.scrollLeft += e.deltaY;
+//	}
 	
-//	$('.section-works__scroll').scroll(function () {
-//		var maxOffset = $('.works-scrollbar').width() - $('.works-scrollbar__track').width(),
-//			ratio = document.querySelector('.section-works__scroll').scrollLeft / worksSlider.maxOffset;
-//		
-//		$('.works-scrollbar__track').css('left', maxOffset*ratio + 'px');
-//		
-//	})
-////	$('.works-scrollbar__track').click(function (e) {
-////		console.log(e)
-////	})
-//	dragMaster.makeDraggable(document.querySelector('.works-scrollbar__track'))
-//	
-//	
+	
+    document.addEventListener("wheel", function (e) {
+		var delta 			= e.deltaY,
+			documentScroll 	= window.pageYOffset;
+		
+		var box = worksSlider.element.getBoundingClientRect();
+		
+		if (box.top < 100 && box.top > -100) {
+			if (delta >= 0) { // Вниз
+				if (!worksSlider.end) {
+					worksSlider.start = false;
+					e.preventDefault();
+					worksSlider.element.scrollLeft += delta;
+					document.body.style.overflow = 'hidden';
+				} else {
+					document.body.style.overflow = '';
+				}
+			} else { // Вверх
+				
+				if (!worksSlider.start) {
+					worksSlider.end = false;
+					e.preventDefault();
+					worksSlider.element.scrollLeft += delta;
+					document.body.style.overflow = 'hidden';
+				} else {
+					document.body.style.overflow = '';
+				}
+			}
+		}
+	});
 	
 	
 	$('.menu-btn').click(function () {
