@@ -224,19 +224,19 @@ $(document).ready(function () {
 	
 	
 	
-//	/*********************
-//	 * Header
-//	 *********************/
-//	var header 		= document.querySelector('.header'),
-//		headerTop 	= getCoords(header);
-//	
-//	document.addEventListener('scroll', function () {
-//		if (window.pageYOffset > headerTop.top) {
-//			header.classList.add('fixed');
-//		} else {
-//			header.classList.remove('fixed');
-//		}
-//	})
+	/*********************
+	 * Header
+	 *********************/
+	var header 		= document.querySelector('.header'),
+		headerTop 	= getCoords(header);
+	
+	document.addEventListener('scroll', function () {
+		if (window.pageYOffset > headerTop.top) {
+			header.classList.add('fixed');
+		} else {
+			header.classList.remove('fixed');
+		}
+	})
 	
 	
 //	var scrollAnimation = 	window.requestAnimationFrame ||
