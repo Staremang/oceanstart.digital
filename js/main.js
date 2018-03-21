@@ -403,12 +403,12 @@ $(document).ready(function () {
 	if (screen.width < 990) {
 		$('.input-container__input').css('padding-left', '');
 		
-		$('.technologies-slider').slick({
-			dots: true
-		});
-		$('.section-form__checkbox-block').slick({
-			dots: true
-		});
+//		$('.technologies-slider').slick({
+//			dots: true
+//		});
+//		$('.section-form__checkbox-block').slick({
+//			dots: true
+//		});
 	} else {
 		
 	}

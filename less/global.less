@@ -1671,6 +1671,11 @@ a.link {
 		position: absolute;
 		right: 20px;
 		bottom: 20px;
+		
+		display: none;
+		@media (min-width: @width-lg) {
+			display: block;
+		}
 	}
 	&__illustration {
 		height: 140px;
@@ -1961,10 +1966,8 @@ a.link {
 	}
 }
 .checkbox-container {
-	margin-bottom:60px;
-	@media (min-width: @width-lg) {
+//	margin-bottom:60px;
 		margin-bottom: 33px;
-	}
 	
 	&__title {
 
@@ -1984,6 +1987,10 @@ a.link {
 	}
 	&__list {
 		display: flex;
+		padding-left: 22px;
+		@media (min-width: @width-lg) {
+			padding-left: 0;
+		}
 	}
 	&__left {
 		flex: 0 0 133px;
@@ -2111,9 +2118,17 @@ a.link {
 		&_long {
 			width: 190px;
 		}
+		&_left {
+			margin-left: 0;
+		}
 	}
 	
 	@media (min-width: @width-lg) {
+		&__btn-submit {
+			&_left {
+				margin-left: auto;
+			}
+		}
 		&__btn-1 {
 			width: 160px;
 			margin-right: 10px;
