@@ -339,17 +339,33 @@ a.link {
 //	position: fixed;
 //	top: 0;
 //	left: 0;
+    font-family: 'Poppins', sans-serif;
 	
 	display: none;
 	
 	max-width: 600px;
 	background: white;
+	border-radius: 5px;
 	
 	height: 100%;
+    padding-left: 50px;
+	padding-right: 50px;
 	@media (min-width: @width-md) {
 		max-height: 520px;
 	}
 	
+//	background: url(../img/rm/form.png) no-repeat center top;
+	
+	&__title {
+		margin-top: 20px;
+		margin-bottom: 41px;
+		
+		font-weight: 600;
+		line-height: 33px;
+		font-size: 20px;
+		letter-spacing: 0;
+		text-align: center;
+	}
 }
 /*
  *********************************
@@ -358,7 +374,7 @@ a.link {
 */
 .header {
 	
-	background: #E9ECF2;
+//	background: #E9ECF2; 
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -456,6 +472,7 @@ a.link {
     color: white;
 	overflow: hidden;
 	position: relative;
+	min-height: 820px;
 	> .container {
 		position: relative;
 		height: 100%;
@@ -1595,9 +1612,9 @@ a.link {
 	@media (min-width: @width-lg) {
 		padding-top: 142px;
 	}
-	&__scroll {
-		overflow-x: scroll;
-	}
+//	&__scroll {
+//		overflow-x: scroll;
+//	}
 	&__slider {
 //		transform: translateX(-2910px);
 		
@@ -1705,21 +1722,21 @@ a.link {
 		white-space: nowrap;
 	}
 }
-.works-scrollbar {
-	
-	background: #EFF2F6;
-	border-radius: 4px;
-	height: 8px;
-	position: relative;
-    margin-top: 55px;
-	&__track {
-		position: absolute;
-		width: 450px;
-		height: 100%;
-		border-radius: 4px;
-		background: #2577F4;
-	}
-}
+//.works-scrollbar {
+//	
+//	background: #EFF2F6;
+//	border-radius: 4px;
+//	height: 8px;
+//	position: relative;
+//    margin-top: 55px;
+//	&__track {
+//		position: absolute;
+//		width: 450px;
+//		height: 100%;
+//		border-radius: 4px;
+//		background: #2577F4;
+//	}
+//}
 
 .size (@w, @h) {
 	display: block;
@@ -1750,6 +1767,13 @@ a.link {
 //		border: 1px solid red;
 		height: 100%;
 		width: 100%;
+		overflow: hidden;
+		position: relative;
+		> video {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 .work-2 {
@@ -1774,6 +1798,11 @@ a.link {
 //		border: 1px solid red;
 		height: 100%;
 		width: 100%;
+		> video {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 .work-3 {
@@ -1902,6 +1931,9 @@ a.link {
 	}
 }
 .form-bg {
+    left: 0;
+    top: 0;
+    transform: translateZ(0);
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -1960,6 +1992,7 @@ a.link {
 }
 .input-container {
     margin-top: 46px;
+    transform: translateZ(0);
 	@media (min-width: @width-lg) {
 		margin-top: 0;	
 	}
@@ -2075,6 +2108,9 @@ a.link {
 	&__btn-submit {
 		margin-left: auto;
 		width: 140px;
+		&_long {
+			width: 190px;
+		}
 	}
 	
 	@media (min-width: @width-lg) {

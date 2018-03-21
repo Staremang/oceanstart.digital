@@ -199,7 +199,7 @@
 						<div class="tile-4__text">There’s more than 200 clients that work with us on a regular basis</div>
 						<div class="tile-4__val">200+</div>
 						<div class="tile-4__note">clients</div>
-						<button class="tile-4__btn btn btn_blue">Become one</button>
+						<button data-fancybox data-src="#become-partner" class="tile-4__btn btn btn_blue">Become one</button>
 					</div>
 					<div class="tile-5 col-md-4 col-lg-6 tile__item tile__item_adaptive-height">
 						<div class="tile__title">We are located in Nizhnij Novgorod, russian think-tank center.</div>
@@ -376,7 +376,9 @@
 							</g>
 						</svg>
 						<figure class="work-1__phone">
-							<div class="work-1__screen"></div>
+							<div class="work-1__screen">
+								<video muted loop autoplay src="video/mhid-animation.mp4"></video>
+							</div>
 						</figure>
 					</div>
 					<div class="works-item__bottom">
@@ -397,7 +399,9 @@
 							</g>
 						</svg>
 						<figure class="work-2__phone">
-							<div class="work-2__screen"></div>
+							<div class="work-2__screen">
+								<video src="video/avtosushi.mp4" muted loop autoplay></video>
+							</div>
 						</figure>
 					</div>
 					<div class="works-item__bottom">
@@ -495,7 +499,7 @@
 			</div>
 			<div class="container">
 				<div class="section-works__bottom">
-					<button class="section-works__btn btn btn_blue">More</button>
+					<button data-fancybox data-src="#request-portfolio" class="section-works__btn btn btn_blue">More</button>
 				</div>
 			</div>
 		</section>
@@ -738,7 +742,7 @@
 								<div class="col-md-6">
 									<div class="input-container__group">
 										<label for="quote-first-name" class="input-container__label">First Name</label>
-										<input id="quote-first-name" type="text" data-msg="Enter your first name!" name="first-name" class="input-container__input" required>
+										<input id="quote-first-name" type="text" data-name data-msg="Enter your first name!" name="first-name" class="input-container__input" required>
 									</div>
 								</div>
 								<div class="col-md-6">
@@ -859,13 +863,29 @@
 	</div>
 	
 	<div id="request-portfolio" class="popup">
+		
+		<div class="form-bg">
+			<svg class="form-bg__icon" width="130" height="130" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<defs>
+					<path id="path1_stroke" d="M 1.76777 15.7322C 0.791456 14.7559 -0.791456 14.7559 -1.76777 15.7322C -2.74408 16.7085 -2.74408 18.2915 -1.76777 19.2678L 1.76777 15.7322ZM 17.5 35L 15.7322 36.7678C 16.7085 37.7441 18.2915 37.7441 19.2678 36.7678L 17.5 35ZM 54.2678 1.76777C 55.2441 0.791456 55.2441 -0.791456 54.2678 -1.76777C 53.2915 -2.74408 51.7085 -2.74408 50.7322 -1.76777L 54.2678 1.76777ZM -1.76777 19.2678L 15.7322 36.7678L 19.2678 33.2322L 1.76777 15.7322L -1.76777 19.2678ZM 19.2678 36.7678L 54.2678 1.76777L 50.7322 -1.76777L 15.7322 33.2322L 19.2678 36.7678Z"/>
+				</defs>
+				<g id="Group">
+					<path fill="#27AE60" d="M 130 65C 130 100.899 100.899 130 65 130C 29.1015 130 0 100.899 0 65C 0 29.1015 29.1015 0 65 0C 100.899 0 130 29.1015 130 65Z"/>
+					<use xlink:href="#path1_stroke" transform="translate(40 54)" fill="#0F8A43"/>
+					<use xlink:href="#path1_stroke" transform="translate(39 48)" fill="#FFFFFF"/>
+				</g>
+			</svg>
+
+			<h2 class="form-bg__title"></h2>
+			<div class="form-bg__text">You message has been successfully sent. We will contact you soon</div>
+		</div>
 		<form class="input-container" id="form-request-portfolio">
-			<h2 class="input-container__title">Request full portfolio</h2>
+			<h2 class="popup__title">Request full portfolio</h2>
 			<div class="row no-gutters">
 				<div class="col-6">
 					<div class="input-container__group">
 						<label for="request-portfolio-name" class="input-container__label">Your Name</label>
-						<input  id="request-portfolio-name" type="text" data-msg="Enter your name!" name="name" class="input-container__input" required>
+						<input  id="request-portfolio-name" type="text" data-name data-msg="Enter your name!" name="name" class="input-container__input" required>
 					</div>
 				</div>
 				<div class="col-6">
@@ -893,14 +913,75 @@
 				<textarea class="input-container__input input-container__input_textarea" name="" id="" rows="10"></textarea>
 			</div>
 			<div class="input-container__bottom">
-				<button type="submit" class="btn btn_blue input-container__btn-submit">Send</button>
+				<button type="submit" class="btn btn_blue input-container__btn-submit input-container__btn-submit_long">Send Request</button>
 				<input type="hidden" name="form-type" value="request-portfolio">
 			</div>
 		</form>
 	</div>
+	<div id="become-partner" class="popup">
+		<div class="form-bg">
+			<svg class="form-bg__icon" width="130" height="130" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<defs>
+					<path id="path1_stroke" d="M 1.76777 15.7322C 0.791456 14.7559 -0.791456 14.7559 -1.76777 15.7322C -2.74408 16.7085 -2.74408 18.2915 -1.76777 19.2678L 1.76777 15.7322ZM 17.5 35L 15.7322 36.7678C 16.7085 37.7441 18.2915 37.7441 19.2678 36.7678L 17.5 35ZM 54.2678 1.76777C 55.2441 0.791456 55.2441 -0.791456 54.2678 -1.76777C 53.2915 -2.74408 51.7085 -2.74408 50.7322 -1.76777L 54.2678 1.76777ZM -1.76777 19.2678L 15.7322 36.7678L 19.2678 33.2322L 1.76777 15.7322L -1.76777 19.2678ZM 19.2678 36.7678L 54.2678 1.76777L 50.7322 -1.76777L 15.7322 33.2322L 19.2678 36.7678Z"/>
+				</defs>
+				<g id="Group">
+					<path fill="#27AE60" d="M 130 65C 130 100.899 100.899 130 65 130C 29.1015 130 0 100.899 0 65C 0 29.1015 29.1015 0 65 0C 100.899 0 130 29.1015 130 65Z"/>
+					<use xlink:href="#path1_stroke" transform="translate(40 54)" fill="#0F8A43"/>
+					<use xlink:href="#path1_stroke" transform="translate(39 48)" fill="#FFFFFF"/>
+				</g>
+			</svg>
+
+			<h2 class="form-bg__title"></h2>
+			<div class="form-bg__text">You message has been successfully sent. We will contact you soon</div>
+		</div>
+		
+		<form class="input-container" id="form-become-partner">
+			<h2 class="popup__title">Become partner</h2>
+			<div class="row no-gutters">
+				<div class="col-6">
+					<div class="input-container__group">
+						<label for="become-partner-name" class="input-container__label">Your Name</label>
+						<input  id="become-partner-name" type="text" data-name data-msg="Enter your name!" name="name" class="input-container__input" required>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="input-container__group">
+						<label for="become-partner-company" class="input-container__label">Company</label>
+						<input  id="become-partner-company" type="text" data-msg="Enter the name of your company!" name="company" class="input-container__input" required style="padding-left: 105px">
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="input-container__group">
+						<label for="become-partner-email" class="input-container__label">Email</label>
+						<input  id="become-partner-email" type="email" data-msg="Enter your email!" name="email" class="input-container__input" required style="padding-left: 75px">
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="input-container__group">
+						<label for="become-partner-tel" class="input-container__label">Phone</label>
+						<input  id="become-partner-tel" type="tel" data-msg="Enter your phone number!" name="tel" class="input-container__input" required style="padding-left: 81px">
+					</div>
+				</div>
+			</div>
+
+			<div class="input-container__group">
+				<label for="" class="input-container__label input-container__label_textarea">Message</label>
+				<textarea class="input-container__input input-container__input_textarea" name="" id="" rows="10"></textarea>
+			</div>
+			<div class="input-container__bottom">
+				<button type="submit" class="btn btn_blue input-container__btn-submit">Send</button>
+				<input type="hidden" name="form-type" value="become-partner">
+			</div>
+		</form>
+	</div>
+	
 	<script>
 		var url = 'mail.php',
 			MAX_FILE_SIZE = 10*1024*1024;
+		
+		// Parallax 
+		var c1 = 50,
+			c2 = 20;
 	</script>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
