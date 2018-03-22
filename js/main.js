@@ -326,8 +326,10 @@ $(document).ready(function () {
 		
 		var box = worksSlider.element.getBoundingClientRect();
 		
-		if (box.top < 100 && box.top > -100) {
-			if (delta >= 0) { // Вниз
+		box = box.top + box.height/2;
+		
+		if (delta >= 0) { // Вниз
+			if (box < screen.height/2 + 100) {
 				if (!worksSlider.end) {
 					worksSlider.start = false;
 					e.preventDefault();
@@ -336,8 +338,9 @@ $(document).ready(function () {
 				} else {
 					document.body.style.overflow = '';
 				}
-			} else { // Вверх
-				
+			}
+		} else { // Вверх
+			if (box > screen.height/2 - 100) {
 				if (!worksSlider.start) {
 					worksSlider.end = false;
 					e.preventDefault();
