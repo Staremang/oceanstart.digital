@@ -437,36 +437,26 @@ $(document).ready(function () {
 		var data = new FormData(form[0]),
 			xhr  = new XMLHttpRequest();
 		
-//		xhr.open("POST", url);
-//
-//		xhr.onreadystatechange = function() {
-//			if (xhr.readyState != 4) return;
-//			
-//			if(xhr.status != 200) {
-//				alert(xhr.status + ': ' + xhr.statusText);
-//			} else {
-//				if (form.attr('id') == 'form-get-a-quote') {
-//					var name = $('#quote-first-name').val();
-//
-//					$('.form-bg__title').text('Thank you, ' + name + '!');
-//
-//					form.css('opacity', '0');
-//					$('.form-bg').css('opacity', '1');
-//				} else if (form.attr('id') == 'form-request-portfolio' || form.attr('id') == 'form-become-partner') {
-//					$.fancybox.close();
-//				}
-//			}
-//		};
-//		
-//		xhr.send(data);
+		xhr.open("POST", url);
+
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState != 4) return;
+			
+			if(xhr.status != 200) {
+				alert(xhr.status + ': ' + xhr.statusText);
+			} else {
+
+				var name 	= form.find('input[data-name]').val(),
+					formBg 	= form.siblings('.form-bg');
+
+				formBg.find('.form-bg__title').text('Thank you, ' + name + '!');
+
+				form.css('opacity', '0');
+				formBg.css('opacity', '1');
+			}
+		};
 		
-		var name 	= form.find('input[data-name]').val(),
-			formBg 	= form.siblings('.form-bg');
-
-		formBg.find('.form-bg__title').text('Thank you, ' + name + '!');
-
-		form.css('opacity', '0');
-		formBg.css('opacity', '1');
+		xhr.send(data);
 
 		
 	})
