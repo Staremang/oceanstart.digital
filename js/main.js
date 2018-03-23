@@ -320,11 +320,42 @@ $(document).ready(function () {
 //	}
 	
 	
-    document.addEventListener("wheel", function (e) {
-		var delta 			= e.deltaY,
-			documentScroll 	= window.pageYOffset;
+//    document.addEventListener("wheel", function (e) {
+//		var delta 			= e.deltaY,
+//			documentScroll 	= window.pageYOffset;
+//		console.log(e.target);
+//		var box = worksSlider.element.getBoundingClientRect();
+//		
+//		box = box.top + box.height/2;
+//		
+//		if (delta >= 0) { // Вниз
+//			if (box < screen.height/2 + 100) {
+//				if (!worksSlider.end) {
+//					worksSlider.start = false;
+//					e.preventDefault();
+//					worksSlider.element.scrollLeft += delta;
+//					document.body.style.overflow = 'hidden';
+//				} else {
+//					document.body.style.overflow = '';
+//				}
+//			}
+//		} else { // Вверх
+//			if (box > screen.height/2 - 100) {
+//				if (!worksSlider.start) {
+//					worksSlider.end = false;
+//					e.preventDefault();
+//					worksSlider.element.scrollLeft += delta;
+//					document.body.style.overflow = 'hidden';
+//				} else {
+//					document.body.style.overflow = '';
+//				}
+//			}
+//		}
+//	});
+	worksSlider.element.addEventListener('wheel', function (e) {
 		
-		var box = worksSlider.element.getBoundingClientRect();
+		var delta 			= e.deltaY,
+			box = worksSlider.element.getBoundingClientRect();
 		
 		box = box.top + box.height/2;
 		
@@ -334,9 +365,6 @@ $(document).ready(function () {
 					worksSlider.start = false;
 					e.preventDefault();
 					worksSlider.element.scrollLeft += delta;
-					document.body.style.overflow = 'hidden';
-				} else {
-					document.body.style.overflow = '';
 				}
 			}
 		} else { // Вверх
@@ -345,13 +373,11 @@ $(document).ready(function () {
 					worksSlider.end = false;
 					e.preventDefault();
 					worksSlider.element.scrollLeft += delta;
-					document.body.style.overflow = 'hidden';
-				} else {
-					document.body.style.overflow = '';
 				}
 			}
 		}
-	});
+	})
+	
 	
 	
 	$('.menu-btn').click(function () {
